@@ -1,8 +1,15 @@
 AnsuzPersonalHomepage
 =====================
+Found a need to direct individual users to a personalized homepage.  This could probably be accomplished via the user roles, but I'm not exactly sure if the feature is exactly finely tuned, so this is a just a one-off little thing until the access control layer is completely fleshed out. 
 
-Introduction goes here.
+Install it 
+1. After finishing the installation of ansuz_core, enter this address into your browser after the site root:
+    /admin/ansuz_plugin_installers/install?name=ansuz_product_manager&repository_url=git://github.com/yrgoldteeth/ansuz_product_manager.git
+ 
+ 2. Next, enter this address into your browser after the site root:
+    /admin/ansuz_plugin_installers/enable?=ansuz_product_manager
 
+3.  Run rake db:migrate:plugins
 
 Example
 =======
@@ -10,4 +17,4 @@ Example
 Example goes here.
 
 
-Copyright (c) 2009 [name of plugin creator], released under the MIT license
+Copyright (c) 2009 Nicholas Fine, released under the MIT license
