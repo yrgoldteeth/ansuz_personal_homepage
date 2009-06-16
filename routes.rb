@@ -1,1 +1,1 @@
-resources :statements
+resource :statement
