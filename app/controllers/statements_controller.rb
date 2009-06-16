@@ -6,7 +6,11 @@ class StatementsController < ApplicationController
   private
   def load_current_statement
     statement_path = "#{RAILS_ROOT}/users/#{current_user.login}/statement.htm"
-    @current_statement = IO.read(statement_path)
+    if File.exist?(statement_path)
+      @current_statement = IO.read(statement_path)
+    else
+      @current_statement = "No statement found"
+    end
   end
 
   public
