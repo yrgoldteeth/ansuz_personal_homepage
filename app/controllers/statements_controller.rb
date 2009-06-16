@@ -1,7 +1,7 @@
 class StatementsController < ApplicationController
   unloadable
   before_filter  :login_required
-  before_filter  :load_current_statement, :only => [:index]
+  before_filter  :load_current_statement, :only => [:show]
 
   private
   def load_current_statement
@@ -10,6 +10,6 @@ class StatementsController < ApplicationController
   end
 
   public
-  def index
+  def show
   end
 end
